@@ -1,0 +1,111 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "@warp-dot-dev/opencode-warp",
+    "opencode-agent-memory",
+    "cc-safety-net",
+    "open-plan-annotator@latest",
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "mcp": {
+    "MCP_DOCKER": {
+      "command": [
+        "docker",
+        "mcp",
+        "gateway",
+        "run"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "better-fullstack": {
+      "command": [
+        "npx",
+        "-y",
+        "create-better-fullstack@latest",
+        "mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "chrome-devtools": {
+      "command": [
+        "npx",
+        "chrome-devtools-mcp@latest"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "context7": {
+      "enabled": true,
+      "headers": {
+        "Authorization": "Put your api key here"
+      },
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "duckduckgo": {
+      "command": [
+        "npx",
+        "-y",
+        "duckduckgo-mcp-server@latest"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "n8n-mcp": {
+      "command": [
+        "npx",
+        "-y",
+        "n8n-mcp"
+      ],
+      "environment": {
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "LOG_LEVEL": "error",
+        "MCP_MODE": "stdio",
+        "N8N_API_KEY": "Put your api key here",
+        "N8N_API_URL": "http://localhost:5678"
+      },
+      "type": "local"
+    },
+    "playwright": {
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "sequential-thinking": {
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking@latest"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "supabase": {
+      "command": [
+        "npx",
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "Put your api key here"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "drawio": {
+      "type": "remote",
+      "url": "https://mcp.draw.io/mcp",
+      "enabled": true
+    }
+  },
+  "skills": {
+    "paths": [
+      "./skills"
+    ]
+  }
+}
