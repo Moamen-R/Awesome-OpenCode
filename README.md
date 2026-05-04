@@ -14,7 +14,7 @@ global OpenCode config directory.
 If you already have an `opencode.json`, merge the `plugin`, `mcp`, and `skills`
 sections instead of overwriting your existing settings.
 
-##Note
+## Note
 You must add your api keys inside `opencode.json` file 
 And it's editable file you can add your own mcp servers or plugins
 
