@@ -11,7 +11,7 @@ global OpenCode config directory.
    - `~/.config/opencode/skills/`
 2. Copy the files from this repo:
    - `opencode.json` → `~/.config/opencode/opencode.json`
-   - `agent/*` → `~/.config/opencode/agents/`
+   - `agent/*` (this repo) → `~/.config/opencode/agents/`
    - `skills/*` → `~/.config/opencode/skills/`
 
 `opencode.json` points to `./skills`, so keeping the skills folder inside
